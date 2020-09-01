@@ -1,8 +1,8 @@
 # Targetdata
+Integrates with Targetdata Smart API.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/targetdata`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+## Resources
+Get person by it CPF
 
 ## Installation
 
@@ -22,7 +22,39 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Targetdata.configure do |config|
+    config.username      = username
+    config.password      = password
+    config.company_id    = company_id
+    config.client_secret = client_secret
+end
+
+# Find by CPF
+cpf = '88899988811'
+person = Targetdata.person_by_cpf cpf
+
+# Person's attributes
+person.cpf
+person.first_name
+person.middle_name
+person.last_name
+person.gender
+person.birth
+person.status_receita_federal
+person.rg_number
+person.rg_orgao_emissor
+person.rg_uf
+person.voter_registration
+person.death
+person.nationality
+person.minor
+person.marital_status
+person.mother_first_name
+person.mother_middle_name
+person.mother_last_name
+person.schooling
+```
 
 ## Development
 
