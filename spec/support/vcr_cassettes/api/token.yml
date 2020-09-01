@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&client_id=2&client_secret=123456&username=my_user&password=my_password&empresa=1
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Aug 2020 16:30:26 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1870'
+      Connection:
+      - keep-alive
+      Server:
+      - Apache/2.4.39 () OpenSSL/1.0.2k-fips PHP/7.2.19
+      Upgrade:
+      - h2,h2c
+      X-Powered-By:
+      - PHP/7.2.19
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19951'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"Bearer","expires_in":315532800,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg5ZTQwYjc0MWE4M2IxOWNhODQyYzNiNjZlZmE1ZDkxOGYxNGU5MzhhN2QwZjE5YjU0ZjRiM2U2ODQ2ZWY1YTI5NWZjYmUwNWRkYmNhYTA4In0.eyJhdWQiOiIyIiwianRpIjoiODllNDBiNzQxYTgzYjE5Y2E4NDJjM2I2NmVmYTVkOTE4ZjE0ZTkzOGE3ZDBmMTliNTRmNGIzZTY4NDZlZjVhMjk1ZmNiZTA1ZGRiY2FhMDgiLCJpYXQiOjE1OTg1NDU4MjYsIm5iZiI6MTU5ODU0NTgyNiwiZXhwIjoxOTE0MDc4NjI2LCJzdWIiOiIzNTQxIiwic2NvcGVzIjpbXX0.DBZB5q2s9-XClO21HDwopQjfWN6Qp9BnuGCZJH100xO2zOAyno-3d1aVQ3a2WOrZiQpWYzu_2n7Fpx1X_SghtLO27tasneQXp04OFjvU4NZsDt2QSG0_BfwbHgFj_Fk9P6_l6d5AcAcB-6MtazDYnWjdfWZ4Ip-_H6oACT8J_kPxaFFCXhXJaz22A57coJXz6HVFwCMVMXCGIzldtJx7VRG2P-URKmTG0WiAJKFG_cjIvjL24vOX0SYiEmrrkC_mTimHtjRjQ9HB64e0VrB3cz7M6jWAZkHJLK1wfs_YbhS1Rbtq8-6bXtD2ZJikIQ2kMJrim5hb5Ng42RKoxlkosszvr7Y87TUvJs30tHqugvtm0V1V102agAm2aLzhbRidEoNw2zrDG11CXtOPdFziQYA8mqfqd_gYtR-T-E9dSF3IQ7PQv9YBGJybcFsh9Z5keaoWxhDsB7ngxMqMzt_6ejmWJxp4p1zvamYtIb7vM0w9YU_MkSeevK-k6vb_KBaRAVvhkpW94BTdU1HRCeca2boXJ1CvdncwdUN-FQiLnCzOsAYheEoljjIg7sskJBtrTgP1VK5jkmXqi3Iu_BwTo1t4QJ9lbO5QwyDfMCL75Phvv-GJL5WwfK_f-CDdYFfVB6ByLCF22LHYw6bLyXzc6n8TYE_RXsrOEWp9f-5PeQQ","refresh_token":"def502006b8ae7180066a054b26a9783d893458f52316c11e5ca2d22aa8fe6ce32cacb406aac9a13054ae6bc7c0f0b0cd727d251c059d97bef709569c3fb5337c992363af5de6cfd0064844d4232a5660eecfeef92c993e2171baea2658e0ca9b4087914ba2d48f661ef8482b9d84c108731e5502b41009602705b2f7405ce96ca6430660325a822e46c1a44945ed9ce925b0ffecead676960be67e7d1cd64d7c91a4ffec1b4a945ac0d4b54e43051cecd821a574d08d4b00bbf514766bd1f04bc96c02f0a3c3b7bfe1b1068dddfd6a34a40124e7c385b31312ca28f739a7ac64045591b2d44b6bfb4561182c849fe1a6660b59bc5b2e003d9c6a1b40fd617007e3b8b0717b6ca26153ef5c6e87d43c9c97c96c9283aa0a5c3924abd11f1c80498f3020c03a262fe2435d88178e23dd0acdcc29342e8d020a1105f631a9dadc63cbcfb6b0cd0b306c6440bad9b4ca98322a1eea0889c85bcaefad35a965b6abc26576ea8"}'
+  recorded_at: Thu, 27 Aug 2020 16:30:27 GMT
+recorded_with: VCR 6.0.0

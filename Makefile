@@ -1,0 +1,2 @@
+console:
+	bin/console

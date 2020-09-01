@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&client_id=2&client_secret=123456&username=my_user&password=my_password&empresa=1
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - targetdatasmart.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Sep 2020 13:02:20 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1870'
+      Connection:
+      - close
+      Server:
+      - Apache/2.4.39 () OpenSSL/1.0.2k-fips PHP/7.2.19
+      Upgrade:
+      - h2,h2c
+      X-Powered-By:
+      - PHP/7.2.19
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19977'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"Bearer","expires_in":315532800,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjM2NmU3ZWJkMDhlM2ZmNzkyNDNiODFhMDFkODI1YmI2OGY4N2NjMzc0OGEyMDJlZWJkMTg2MjVlZTdhMzRmMWE1YjdhMTliODA5MDUzZGZlIn0.eyJhdWQiOiIyIiwianRpIjoiMzY2ZTdlYmQwOGUzZmY3OTI0M2I4MWEwMWQ4MjViYjY4Zjg3Y2MzNzQ4YTIwMmVlYmQxODYyNWVlN2EzNGYxYTViN2ExOWI4MDkwNTNkZmUiLCJpYXQiOjE1OTg5NjUzNDAsIm5iZiI6MTU5ODk2NTM0MCwiZXhwIjoxOTE0NDk4MTQwLCJzdWIiOiIzNTQxIiwic2NvcGVzIjpbXX0.EJ5O9kIM4k_MZibp3T2OMb3chz-AOAbE4In4U8XJo-9opi7oGvjRsWpwaPiND4GQ1lvew2WjKVH_aHl0ePTCgXzU6oSUZR6-yBKGEOedtg7nHPxztq0wFz82IGsP1PpXn_ymlHxWoU1SZKt7n8v3AvB94RLy65j4S5A1S9DenB5AjtFKVDC3gtPAl8ZFQJ46sAKbaOJc7X2NJ7rMuDcRJ51EHlnZvl6gnJVfFYW5BW81X3ulIJtDut_PI93XFr23nZGywQHMnSvBC8ihDBkSUp3fK73zBPGthcNfVjEpHIzUFpdGVc7aFnM324ZgOlYcYseD-_oFm9E4wMrXcdV_T8fxN8IENQNDcV861N3s3m4y0nNZ2L5gGfrA6r1vMEe5FmOFsWvztG2pFL0ogKCT9FF2ULHR17gBkMgAzEETKjic8qSazfgRQ5hxZTJQFipOQvbdIpVsg_wV2VelQJPkuVSAcjgV3rXOVMJ6hS7CE0rkEeFy5w2PBjEDA4ycCJeLiHZd5AA-4y6kVADozpdmERHHAdeVCnT73iaLkGv_AXDJUt7bPm0gPHQB_mit-0WiJepP-Kclujss945JgFXvyqy4nh2IEsoQce1k8aAIMAb_ilzVYVt7Ia89qRoXKRUtf0c4_9foYI7QzZKqOP1tssBIOC6rSNIiIImxOhW8_PU","refresh_token":"def5020015619927624e73a15d5381a025a4d7d8006b69bb4f13953e0f0a1111b5987970b568e6444d1024d4bdef4e37d92bfce5428695c0eea34a4ed11d5833ccde48753d8febec83e8f02dab5bc84fdf9608f6292a6684c4b7c0339be6524a90ea3853a8c5835494e5447421f05dfe1cf6050af6c626896a33b905fd6fc6d178cb6cebbd83e863501251ec579289547c715fa1004e1beeaeb66ff6194fd8ba6c0adc0ddb8edb82c4754c929d9c2fab9f67d7523079e5dc6d034b82091734e007d10ca9145e2db8357214431a47a976c477c25a3818ad6b0a8c0117366f84fb10429bad6c94370884af58f44e297382ba5c6c7c48e94ff734ce9a9036e90ca52ac5bb8ca228bafcc401687ff904891927f1a7168b2505d05bfe8637d9ee1a04beb9e86b30b46c9b9b0d8e2f4e5be98a01da0ebe5264bd4d3f5ded05b80cfb8f65aa177ef61190bd01b4e216113e81a3e6337d41abe5207af543b33b61bc5b9f39d19813"}'
+  recorded_at: Tue, 01 Sep 2020 13:02:20 GMT
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/PF/CPF
+    body:
+      encoding: UTF-8
+      string: '["35318965040"]'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer 123
+      Connection:
+      - close
+      Host:
+      - targetdatasmart.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 01 Sep 2020 13:02:21 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '111'
+      Connection:
+      - close
+      Server:
+      - Apache/2.4.39 () OpenSSL/1.0.2k-fips PHP/7.2.19
+      Vary:
+      - Authorization
+      Upgrade:
+      - h2,h2c
+      X-Powered-By:
+      - PHP/7.2.19
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19976'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":-1,"message":"Token inv\u00e1lido! Utilize o \"refresh_token\"
+        para gerar um novo token v\u00e1lido."}'
+  recorded_at: Tue, 01 Sep 2020 13:02:21 GMT
+recorded_with: VCR 6.0.0

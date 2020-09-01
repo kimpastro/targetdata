@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&client_id=2&client_secret=123456&username=my_user&password=my_password&empresa=1
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Aug 2020 17:28:13 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1870'
+      Connection:
+      - keep-alive
+      Server:
+      - Apache/2.4.39 () OpenSSL/1.0.2k-fips PHP/7.2.19
+      Upgrade:
+      - h2,h2c
+      X-Powered-By:
+      - PHP/7.2.19
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19987'
+    body:
+      encoding: UTF-8
+      string: '{"token_type":"Bearer","expires_in":315532800,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYzYmZlMzJlMWQ5MWJlYThkNjVjNTQyM2FkOWJiOWYwMGQ1Y2E3YmZmY2E0ZTRiMGQ5MjgwOGVlYjU1ZTNmMThmMDEzOTkyYzNmNGEzYTY3In0.eyJhdWQiOiIyIiwianRpIjoiZjNiZmUzMmUxZDkxYmVhOGQ2NWM1NDIzYWQ5YmI5ZjAwZDVjYTdiZmZjYTRlNGIwZDkyODA4ZWViNTVlM2YxOGYwMTM5OTJjM2Y0YTNhNjciLCJpYXQiOjE1OTg1NDkyOTMsIm5iZiI6MTU5ODU0OTI5MywiZXhwIjoxOTE0MDgyMDkzLCJzdWIiOiIzNTQxIiwic2NvcGVzIjpbXX0.fj_k3qK7vWV-Cix0wjak7hgYmXUxnkT1eBFxnWGMFmPypipdbQ7JO0aikFL0ThmqHY77XjAuzt5RyVAL0_9Y9vp5zz6kCpjvigV2b28v0NCLdcgwor7g4ZV4ZwTdZu03cH96ATg99ImzABlywCKR_BP3iAXoMQtM6_rh2KPccx5zfXxJ0-1q3QbyutUD0zK43FAIKvwpnW-kEt6VW7AD5SsX7WqSRkwni7UIZI0a4bLtISzG72lt3OPZ0p0wnLVm_dIF-dcPALlzZ2MnlcDBaKDTIy5CJbIBN6ZUoSMYKnWwfIZtt5GcAcUOuh0LXDvNftysgtKPJh_hnjq1apMwo1R0fg9EaHN-yVBsk5htdUtdPGdAR0qpaKee0MqVPLJUJRylam6GvSbagJpCqx_sOqNFRikjDGQW-qbkwnNlvT557zH1kClTpkLdNeRk1nnNJOFJbpIvKNulwn1K7fOJaxuioFbgGkCoEgYmBLLeZQwS36H23Yghs0MKDwlyATN5hOeNIJreuhBKTDwqKS-CKqq-gGIxasvibZGvXgcnEgRFVo629154Bsf_J983_cxYWz5j7Zj3MCnqpJ15-p6XRMHaA3_iwWfUqSdE4zBCtwV4btwztIr4dYev-WzkqLxpTOaNwpAGH6Z4cK1_aDQ6kHecXZesXhgKsV45vo8kiSY","refresh_token":"def502004aab44a0a731c3052c0b837c64d26d1badffca061dd182e58c5e48cc2805d12fc390f046cec021f96ad64b7685f2469f570a8000ef54cbac2aeaf6731bce1fb0287c3ad16648430b675346b8c743ba7d9b5692cea9cc00a0cf638c920fcd19cfe9ed4735136814d633a1baf1dec84c4d7de7a77d2e57be485b76f2e1c36e90f5e0282a4a8da4f702a3f13fbb96b3165e93300fc9e697031b1f9b1836ab2209d60a5eeccbb703c09e9b968e685e4843977d9b8c163236c33b678976d340093b77f86a7b49ba0f5dd09df0e30527e3ea1f8c7aaa0a21510be2fad776a14891c02fd1b15f482220473beb107c39583533776473a279686206a8c2a92eb178c58a068f378a08902421b2b3f853c088e88babb334a47f1250f26573a2ae0e357cb97ea1da44117dc81898ec69296a44047efb70429f8b3fd3802a1cec644df702b62f886e9b4190dd50943e41fb356615ed34a46c6e5601ae448dd7cdfbf1e91d4ab4"}'
+  recorded_at: Thu, 27 Aug 2020 17:28:14 GMT
+- request:
+    method: post
+    uri: https://targetdatasmart.com/api/PF/CPF
+    body:
+      encoding: UTF-8
+      string: '["35318965040"]'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYzYmZlMzJlMWQ5MWJlYThkNjVjNTQyM2FkOWJiOWYwMGQ1Y2E3YmZmY2E0ZTRiMGQ5MjgwOGVlYjU1ZTNmMThmMDEzOTkyYzNmNGEzYTY3In0.eyJhdWQiOiIyIiwianRpIjoiZjNiZmUzMmUxZDkxYmVhOGQ2NWM1NDIzYWQ5YmI5ZjAwZDVjYTdiZmZjYTRlNGIwZDkyODA4ZWViNTVlM2YxOGYwMTM5OTJjM2Y0YTNhNjciLCJpYXQiOjE1OTg1NDkyOTMsIm5iZiI6MTU5ODU0OTI5MywiZXhwIjoxOTE0MDgyMDkzLCJzdWIiOiIzNTQxIiwic2NvcGVzIjpbXX0.fj_k3qK7vWV-Cix0wjak7hgYmXUxnkT1eBFxnWGMFmPypipdbQ7JO0aikFL0ThmqHY77XjAuzt5RyVAL0_9Y9vp5zz6kCpjvigV2b28v0NCLdcgwor7g4ZV4ZwTdZu03cH96ATg99ImzABlywCKR_BP3iAXoMQtM6_rh2KPccx5zfXxJ0-1q3QbyutUD0zK43FAIKvwpnW-kEt6VW7AD5SsX7WqSRkwni7UIZI0a4bLtISzG72lt3OPZ0p0wnLVm_dIF-dcPALlzZ2MnlcDBaKDTIy5CJbIBN6ZUoSMYKnWwfIZtt5GcAcUOuh0LXDvNftysgtKPJh_hnjq1apMwo1R0fg9EaHN-yVBsk5htdUtdPGdAR0qpaKee0MqVPLJUJRylam6GvSbagJpCqx_sOqNFRikjDGQW-qbkwnNlvT557zH1kClTpkLdNeRk1nnNJOFJbpIvKNulwn1K7fOJaxuioFbgGkCoEgYmBLLeZQwS36H23Yghs0MKDwlyATN5hOeNIJreuhBKTDwqKS-CKqq-gGIxasvibZGvXgcnEgRFVo629154Bsf_J983_cxYWz5j7Zj3MCnqpJ15-p6XRMHaA3_iwWfUqSdE4zBCtwV4btwztIr4dYev-WzkqLxpTOaNwpAGH6Z4cK1_aDQ6kHecXZesXhgKsV45vo8kiSY
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Aug 2020 17:28:19 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2538'
+      Connection:
+      - keep-alive
+      Server:
+      - Apache/2.4.39 () OpenSSL/1.0.2k-fips PHP/7.2.19
+      Vary:
+      - Authorization
+      Upgrade:
+      - h2,h2c
+      X-Powered-By:
+      - PHP/7.2.19
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Limit:
+      - '20000'
+      X-Ratelimit-Remaining:
+      - '19980'
+    body:
+      encoding: UTF-8
+      string: '{"header":{"api_version":"3.0.0","type_connection":1,"user":"","request_time":"2020-08-27
+        14:28:15","elapsed_return_time_milliseconds":2202.76,"access_ip":null,"error":null,"amount_sent":1},"report":{"totalEnviado":1,"totalRetornado":1,"nome":1,"sexo":1,"dataNascimento":1,"estadoCivil":0,"rg":0,"tituloEleitoral":1,"cns":0,"statusReceitaFederal":1,"maeCPF":0,"mae":1,"conjuge":0,"nacionalidade":1,"menorDeIdade":1,"pep":1,"obito":1,"escolaridade":1,"bolsaFamilia":0,"profissao":1,"rendaPresumida":1,"telefone":1,"email":1,"endereco":1,"veiculo":0,"imovel":0,"vizinho":0,"houseHold":0,"parentesco":0,"participacaoSocietaria":1,"possiveisColegasTrabalho":0,"empregador":1},"result":[{"pessoa":{"cadastral":{"CPF":"35318965040","nomePrimeiro":"JOAO
+        SILVA","nomeMeio":"","nomeUltimo":"GARCIA","nomeParentesco":"","sexo":"I","dataNascimento":"1991-06-05","statusReceitaFederal":"Regular","dataAtualizacaoStatusReceitaFederal":"2018-09-11","rgNumero":null,"rgOrgaoEmissor":null,"rgUf":null,"tituloEleitoral":"302050270645","obito":"0","nacionalidade":"Brasileiro","menorDeIdade":"0","pep":"0","estadoCivil":null,"maeCPF":null,"maeNomePrimeiro":"CLAUDIA
+        MARIA","maeNomeMeio":"DA SILVA","maeNomeUltimo":"GARCIA","maeNomeParentesco":null,"escolaridade":"2\u00ba
+        grau completo (ensino m\u00e9dio)","cns":null},"beneficiarioProgramaSocial":{"bolsaFamilia":null},"contato":{"endereco":[{"tipoLogradouro":"RUA","logradouro":"MARIO
+        CAIRO","numero":"4251","complemento":"221 24","bairro":"JARDIM BOSQUE","cidade":"MARINGA","uf":"PR","cep":"87035170","ordem":1}],"email":[{"email":"joaosilvagarcia@gmail.com","ordem":1}],"telefone":[{"ddd":"44","numero":"32203300","operadora":null,"procon":null,"whatsapp":null,"tipoTelefone":null,"ordem":1},{"ddd":"44","numero":"32280882","operadora":null,"procon":"0","whatsapp":null,"tipoTelefone":null,"ordem":2}]},"vinculo":{"parentesco":[],"conjuge":{"nomePrimeiro":null,"nomeMeio":null,"nomeUltimo":null,"parentesco":null},"vizinho":[],"houseHold":[],"possiveisColegasTrabalho":[],"participacaoSocietaria":[{"nr_cnpj":"25232643000163","razaoSocial":"JOAO
+        SILVA GARCIA 35318965040","participacao":null,"qualificacao":null},{"nr_cnpj":"47850270000183","razaoSocial":"JOAO
+        SILVA GARCIA 35318965040","participacao":null,"qualificacao":null}],"empregador":[{"cnpj":"15132155000133","razaoSocial":"LOJAS
+        DE ROUPA LTDA","dataAdmissao":"2014-07-10"}]},"patrimonio":{"veiculo":[],"imovel":[]},"socioDemografico":{"profissao":"Vendedor
+        de com\u00e9rcio varejista","rendaPresumida":"At\u00e9 R$ 1.001,00"}}}]}'
+  recorded_at: Thu, 27 Aug 2020 17:28:19 GMT
+recorded_with: VCR 6.0.0
