@@ -1,6 +1,6 @@
 module Targetdata
   module Api
-    class Base
+    module Auth
       def token
         response = HTTP.headers(auth_headers).post(Targetdata::BASE_URL + '/token', form: auth_body)
         parsed = JSON.parse(response.body.to_s)
