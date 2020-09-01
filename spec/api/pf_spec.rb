@@ -12,11 +12,17 @@ RSpec.describe Targetdata::Api::Pf do
       end
     end
     
+    it "Has token" do
+      VCR.use_cassette('api/person') do
+        expect(api.token).to_not be_empty
+      end
+    end
+
     it "Find Person with CPF" do
       VCR.use_cassette('api/person') do
         person = api.person
         
-        expect(person.class).to eq(Targetdata::Person)
+        expect(person.class).to eq(Targetdata::Entities::Person)
         expect(person.birth).to eq("1991-06-05")
         expect(person.cpf).to eq("35318965040")
         expect(person.death).to eq("0")

@@ -10,7 +10,7 @@ module Targetdata
       
       def person
         response = get_person
-        Person.new hash_person(response.body.to_s)
+        Entities::Person.new hash_person(response.body.to_s)
       end
 
       private

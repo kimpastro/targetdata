@@ -4,10 +4,10 @@ require "http"
 require_relative "targetdata/configuration"
 require_relative "targetdata/errors/unauthorized"
 require_relative "targetdata/errors/person_not_found"
+require_relative "targetdata/entities/person"
 require_relative "targetdata/api/auth"
 require_relative "targetdata/api/requester"
 require_relative "targetdata/api/pf"
-require_relative "targetdata/person"
 
 module Targetdata
   BASE_URL = 'https://targetdatasmart.com/api'
