@@ -2,6 +2,7 @@ module Targetdata
   module Entities
     class Person
       attr_accessor :cpf, 
+                    :email,
                     :first_name, 
                     :middle_name, 
                     :last_name, 
@@ -23,6 +24,7 @@ module Targetdata
       
       def initialize params = {}
         @cpf                    = params['CPF']
+        @email                  = params['email']
         @first_name             = params['nomePrimeiro']
         @middle_name            = params['nomeMeio']
         @last_name              = params['nomeUltimo']

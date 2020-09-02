@@ -18,11 +18,17 @@ module Targetdata
           parsed = JSON.parse(string_body)
 
           raise Targetdata::Errors::PersonNotFound unless person_found?(parsed)
-          parsed["result"].first["pessoa"]["cadastral"]
+          
+          parse_person_hash parsed["result"].first["pessoa"]
         end
         
         def person_found? hash
           !hash["result"].empty?
+        end
+
+        def parse_person_hash hash
+          hash["cadastral"]["email"] = hash["contato"]["email"].first["email"]
+          hash["cadastral"]
         end
     end
   end

@@ -25,6 +25,7 @@ RSpec.describe Targetdata::Api::Pf do
         expect(person.class).to eq(Targetdata::Entities::Person)
         expect(person.birth).to eq("1991-06-05")
         expect(person.cpf).to eq("35318965040")
+        expect(person.email).to eq("joaosilvagarcia@gmail.com")
         expect(person.death).to eq("0")
         expect(person.first_name).to eq("JOAO SILVA")
         expect(person.gender).to eq("I")

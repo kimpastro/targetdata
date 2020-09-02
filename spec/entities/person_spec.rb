@@ -19,8 +19,8 @@ RSpec.describe Targetdata::Entities::Person do
       "maeNomePrimeiro": Faker::Name.first_name,
       "maeNomeMeio": Faker::Name.middle_name,
       "maeNomeUltimo": Faker::Name.last_name,
-      "escolaridade": "Ensino médio"
-
+      "escolaridade": "Ensino médio",
+      "email":"Faker::Internet.email"
     }
   }
   it "initialize by request hash" do
@@ -28,6 +28,7 @@ RSpec.describe Targetdata::Entities::Person do
     expect(person.class).to eq(described_class)
 
     expect(person).to respond_to('cpf')
+    expect(person).to respond_to('email')
     expect(person).to respond_to('first_name')
     expect(person).to respond_to('middle_name')
     expect(person).to respond_to('last_name')
