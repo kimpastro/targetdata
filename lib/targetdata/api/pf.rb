@@ -16,10 +16,8 @@ module Targetdata
       private
         def hash_person string_body
           parsed = JSON.parse(string_body)
-
           raise Targetdata::Errors::PersonNotFound unless person_found?(parsed)
-          
-          parse_person_hash parsed["result"].first["pessoa"]
+          parse_person_hash parsed
         end
         
         def person_found? hash
@@ -27,8 +25,14 @@ module Targetdata
         end
 
         def parse_person_hash hash
-          hash["cadastral"]["email"] = hash["contato"]["email"].first["email"]
-          hash["cadastral"]
+          pessoa = hash["result"].first["pessoa"]
+          pessoa["cadastral"]["email"] = nil
+          
+          if hash["report"]["email"] >= 1
+            pessoa["cadastral"]["email"] = pessoa["contato"]["email"].first["email"]
+          end
+          
+          pessoa["cadastral"]
         end
     end
   end
