@@ -45,6 +45,10 @@ module Targetdata
         @schooling              = params['escolaridade']
       end
 
+      def full_name
+        "#{@first_name} #{@middle_name} #{@last_name}".strip
+      end
+
       def to_json
         {
           cpf: @cpf,
