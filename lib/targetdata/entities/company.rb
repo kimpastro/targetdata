@@ -14,8 +14,8 @@ module Targetdata
 
       def initialize(hash)
         @cnpj                    = hash.fetch(:CNPJ)
-        @social_reason           = hash.fetch(:razaoSocial)
-        @name                    = hash.fetch(:nomeFantasia)
+        @name                    = hash.fetch(:razaoSocial)
+        @fantasy_name            = hash.fetch(:nomeFantasia)
         @opening_date            = hash.fetch(:dataAbertura)
         @parent_company          = hash.fetch(:matriz)
         @cadastral_status        = hash.fetch(:situacaoCadastral)
