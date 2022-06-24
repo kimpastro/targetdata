@@ -4,13 +4,16 @@ require "http"
 require_relative "targetdata/configuration"
 require_relative "targetdata/errors/unauthorized"
 require_relative "targetdata/errors/person_not_found"
+require_relative "targetdata/errors/not_found"
 require_relative "targetdata/entities/person"
+require_relative "targetdata/entities/company"
 require_relative "targetdata/api/auth"
 require_relative "targetdata/api/requester"
 require_relative "targetdata/api/pf"
+require_relative "targetdata/api/cnpj"
 
 module Targetdata
-  BASE_URL = 'https://targetdatasmart.com/api'
+  BASE_URL = 'https://api.targetdata-smart.com/api'
   
   class << self
     attr_writer :configuration

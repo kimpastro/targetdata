@@ -10,6 +10,7 @@ group :test do
   gem 'dotenv', '~> 2.7', '>= 2.7.6'
   gem 'pry-byebug', '~> 3.9'
   gem 'faker', '~> 2.13'
+  gem "rspec-snapshot", "~> 2.0"
 end
 
 gem 'http', '~> 4.4', '>= 4.4.1'

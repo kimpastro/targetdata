@@ -49,7 +49,7 @@ module Targetdata
         "#{@first_name} #{@middle_name} #{@last_name}".strip
       end
 
-      def to_json
+      def to_json(*args)
         {
           cpf: @cpf,
           first_name: @first_name,
@@ -70,7 +70,7 @@ module Targetdata
           mother_middle_name: @mother_middle_name,
           mother_last_name: @mother_last_name,
           schooling: @schooling
-        }.to_json
+        }.to_json(*args)
       end
     end
   end
