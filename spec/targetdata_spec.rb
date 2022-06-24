@@ -27,41 +27,25 @@ RSpec.describe Targetdata do
   end
 
   context "Class Methods" do
-    let!(:cpf) { '35318965040' }
+    let(:cpf) { ENV.fetch('TEST_CPF') }
 
     before do
       Targetdata.configure do |config|
-        config.username      = ENV['TARGET_USERNAME']
-        config.password      = ENV['TARGET_PASSWORD']
-        config.company_id    = ENV['TARGET_COMPANY_ID']
-        config.client_secret = ENV['TARGET_CLIENT_SECRET']
+        config.username      = ENV.fetch('TARGET_USERNAME')
+        config.password      = ENV.fetch('TARGET_PASSWORD')
+        config.company_id    = ENV.fetch('TARGET_COMPANY_ID')
+        config.client_secret = ENV.fetch('TARGET_CLIENT_SECRET')
       end
     end
 
     it "person_by_cpf" do
-      VCR.use_cassette('api/person') do
-        @person = Targetdata.person_by_cpf cpf
+      person = VCR.use_cassette('api/person') do
+        Targetdata.person_by_cpf cpf
       end
 
-      expect(@person.cpf).to eq('35318965040')
-      expect(@person.first_name).to eq('JOAO SILVA')
-      expect(@person.middle_name).to eq('')
-      expect(@person.last_name).to eq('GARCIA')
-      expect(@person.gender).to eq('I')
-      expect(@person.birth).to eq('1991-06-05')
-      expect(@person.status_receita_federal).to eq('Regular')
-      expect(@person.rg_number).to be_nil
-      expect(@person.rg_orgao_emissor).to be_nil
-      expect(@person.rg_uf).to be_nil
-      expect(@person.voter_registration).to eq('302050270645')
-      expect(@person.death).to eq('0')
-      expect(@person.nationality).to eq('Brasileiro')
-      expect(@person.minor).to eq('0')
-      expect(@person.marital_status).to be_nil
-      expect(@person.mother_first_name).to eq('CLAUDIA MARIA')
-      expect(@person.mother_middle_name).to eq('DA SILVA')
-      expect(@person.mother_last_name).to eq('GARCIA')
-      expect(@person.schooling).to eq('2º grau completo (ensino médio)')
+      expect(
+        person.to_json(JSON_PRETTY_PRINT_ARGS)
+      ).to match_snapshot('person')
     end
   end
 end

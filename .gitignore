@@ -1,7 +1,5 @@
-Gemfile.lock
 .DS_Store
 .rbenv-gemsets
-.ruby-version
 .vscode/
 .bundle
 *gemfile.lock
@@ -17,5 +15,5 @@ Gemfile.lock
 
 # rspec failure tracking
 .rspec_status
-.env.test
+.env*.local
 *.gem

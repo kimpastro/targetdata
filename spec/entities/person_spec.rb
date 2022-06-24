@@ -1,7 +1,7 @@
 RSpec.describe Targetdata::Entities::Person do
   let!(:request_hash) {
     {
-      "CPF": Faker::Number.number(11),
+      "CPF": Faker::Number.number(digits: 11),
       "nomePrimeiro": Faker::Name.first_name,
       "nomeMeio": Faker::Name.middle_name,
       "nomeUltimo": Faker::Name.last_name,
