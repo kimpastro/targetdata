@@ -21,7 +21,7 @@ module Targetdata
         end
         
         def person_found? hash
-          !hash["result"].empty?
+          !!hash["result"]
         end
 
         def parse_person_hash hash
