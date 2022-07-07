@@ -2,9 +2,7 @@ module Targetdata
   module Api
     module Auth
       def token
-        response = HTTP.headers(auth_headers).post(Targetdata::BASE_URL + '/token', form: auth_body)
-        parsed = JSON.parse(response.body.to_s)
-        parsed["access_token"]
+        ENV.fetch('TARGET_DATA_ACCESS_TOKEN') || generate_access_token
       end
 
       private
@@ -24,6 +22,12 @@ module Targetdata
             'Content-Type':'application/x-www-form-urlencoded',
             'Accept': 'application/json'
           }
+        end
+
+        def generate_access_token
+          response = HTTP.headers(auth_headers).post(Targetdata::BASE_URL + '/token', form: auth_body)
+          parsed = JSON.parse(response.body.to_s)
+          parsed["access_token"]
         end
     end
   end

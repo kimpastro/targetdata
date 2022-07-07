@@ -10,7 +10,7 @@ require_relative "targetdata/api/requester"
 require_relative "targetdata/api/pf"
 
 module Targetdata
-  BASE_URL = 'https://targetdatasmart.com/api'
+  BASE_URL = 'https://api.targetdata-smart.com/api'
   
   class << self
     attr_writer :configuration
